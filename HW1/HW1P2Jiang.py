@@ -30,13 +30,16 @@ def report(xs):
             if (apartment_people_count > people_peak):
                 people_peak = apartment_people_count
 
-    statistics = []
-    statistics.append(overall_people_count/apartment_count)
-    statistics.append(people_peak)
-    print(statistics)
+    apartment_statistics = []
+    apartment_statistics.append(overall_people_count/apartment_count)
+    apartment_statistics.append(people_peak)
+    return apartment_statistics
 
 def main():
-    report([100, "Jill Johnson", "Billy Ray Cyrus", 110, "Shweta Agarwal", 120, "Miguel Rosas", "Elena Rosas", "Mateo Rosas", 200, "Jason Chan", 210, "Rosalia Torres"]) #base case
+    stats = []
+    #assuming that only valid lists are given
+    stats = report([100, "Jill Johnson", "Billy Ray Cyrus", 110, "Shweta Agarwal", 120, "Miguel Rosas", "Elena Rosas", "Mateo Rosas", 200, "Jason Chan", 210, "Rosalia Torres"]) #base case
+    print(stats)
 
 if __name__ == "__main__":
     main()

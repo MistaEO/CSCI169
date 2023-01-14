@@ -16,13 +16,12 @@ returns “hithere”"""
 
 
 def fun(x, y):
-    print (x + y)
+    return (x + y)
 
 def main():
-    fun(1,5) #int test case
-    fun(2.0, 1.5) #float test case
-    fun("hi", "there") #string test case
-    print("Hello World!")
+    print(fun(1,5)) #int test case
+    print(fun(2.0, 1.5)) #float test case
+    print(fun("hi", "there")) #string test case
 
 if __name__ == "__main__":
     main()
