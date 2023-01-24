@@ -20,7 +20,11 @@ print(bar(ys))
 print(ys)
 #prints 55,2,3 since we made xs reference an entirely new list in bar, thus the inputted ys is not modified in place
 zs=range(0, 10)
-print(foo(zs))
+#print(foo(zs)) 
+#range is immutable and does not support item assignment, this will cause an error
 print(zs)
+#prints range(0,10)
 print(bar(zs))
+#prints [squeegee,2,3]
 print(zs)
+#prints range(0,10) because bar creates a new value that xs references only locally to the function
