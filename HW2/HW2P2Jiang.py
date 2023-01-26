@@ -17,13 +17,13 @@ def spam ():
             #creates a global a variable with value 54
             nonlocal c
             c=54
-            #creates a new object for nonlocal c to reference, with the nonlocal c being the c defined in inner
+            #creates a new object for nonlocal c to reference
             nonlocal bbeans
             bbeans=68
-            #creates a new object for nonlocal bbeans to reference, with the nonlocal bbeans being the bbeans defined in spam
+            #creates a new object for nonlocal bbeans to reference
         innerinner()
         #calls innerinner
-        #creates globl a with value of 54, c now hs value of 54, and bbeans has value of 68
+        #creates global a with value of 54, c now has value of 54, and bbeans has value of 68
         print(c)
         #should print 54 because of nonlocal modification
         return bbeans
