@@ -1,9 +1,10 @@
 import java.util.Date;
 
-class Fruit extends Food {
-    private Date ripe;
+public class Fruit extends Food {
+    protected Date ripe;
     public Fruit(){
-        ripe = new Date();
+        super.name = "Fruit";
+        ripe = new Date(2000000);
     }
     public Fruit(String n, Date r){
         super.name = n;
@@ -11,7 +12,7 @@ class Fruit extends Food {
     }
 
     public void ripeTime(){
-        
+        System.out.println(ripe);
     }
 
     

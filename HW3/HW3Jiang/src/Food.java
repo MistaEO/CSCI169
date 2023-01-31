@@ -1,8 +1,8 @@
-class Food {
+public class Food {
     protected String name;
     
     public Food(){
-        name ="";
+        name ="Food";
     }
 
     public Food(String n){
@@ -14,6 +14,6 @@ class Food {
     }
 
     public void prepare(){
-        System.out.println("Food has been prepared.");
+        System.out.println("Prepare the " + name);
     }
 }

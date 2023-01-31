@@ -1,3 +1,4 @@
+import java.util.Date;
 public class HW3P2Jiang {
 /*In this problem, you will explore inheritance.  
 Implement the classes Food, Fruit, Orange, Apple, Seafood, Shrimp, and Prawn as represented in the class diagram here.
@@ -11,5 +12,11 @@ Note that the name field of any object of a given type should be initialized to 
 ex: Apple objects' names should be initialized to “apple”.
 
  */
+    public static void main(String[] args){
+        Date d = new Date(200000000);
+        Food gum = new Food("gum");
+        Fruit pomelo = new Fruit("pomelo", d);
+        pomelo.ripeTime();
 
+    }
 }
