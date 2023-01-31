@@ -9,7 +9,7 @@ public class Orange extends Fruit{
         super.ripe = r;
     }
     public void prepare(){
-        System.out.println("Peel the " + name)
+        System.out.println("Peel the " + super.name);
     }
     
 }
