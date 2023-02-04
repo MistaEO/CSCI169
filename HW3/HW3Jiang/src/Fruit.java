@@ -12,7 +12,7 @@ public class Fruit extends Food {
     }
 
     public void ripeTime(){
-        System.out.println(ripe);
+        System.out.println("You can eat it on " + ripe);
     }
 
     
