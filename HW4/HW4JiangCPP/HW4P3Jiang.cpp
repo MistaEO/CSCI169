@@ -17,8 +17,28 @@ For this problem, submit your Food.h, Fruit.h, Apple.h, Orange.h, Vegetable.h, a
 The main file should be named HW4P3Lastname.cpp  where Lastname is your last name.*/
 
 #include "Food.h"
+#include "Fruit.h"
+#include "Apple.h"
+#include "Orange.h"
+#include "Vegetable.h"
+#include "Tomato.h"
 
 int main(){
-    Food e = Food("Food");
+    time_t ripeTime = 100;
+    time_t expirationTime = 200;
+    Food pom("pom");
+    pom.prepare();
+    Fruit cucumba("cucumba", ripeTime);
+    cucumba.prepare();
+    Orange orng(ripeTime);
+    orng.prepare();
+    Vegetable bc("bok choy", expirationTime);
+    bc.prepare();
+    std::cout << bc.expireTime() << std::endl;
+    Tomato tmto("T",ripeTime,expirationTime);
+    tmto.prepare();
+    std::cout << tmto.getRipe() << std::endl;
+    std::cout << tmto.expireTime() << std::endl;
+    
     return 0;
 }

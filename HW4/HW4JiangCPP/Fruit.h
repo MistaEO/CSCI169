@@ -12,10 +12,12 @@ class Fruit: public virtual Food{
     Fruit(){
         name = "Fruit";
         ripe = 0;
+        std::cout << "Fruit created" << std::endl;
     }
     Fruit(std::string n, std::time_t r){
         name = n;
         ripe = r;
+        std::cout << "Fruit created" << std::endl;
     }
     void ripeTime(){
         std::cout << "You can eat it on " + ripe << std::endl;

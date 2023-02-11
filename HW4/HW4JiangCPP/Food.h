@@ -9,10 +9,13 @@ class Food{
 
     Food(){
         name = "";
+        std::cout << "Food created" << std::endl;
     }
 
     Food(std::string n){
         name = n;
+        std::cout << "Food created" << std::endl;
+
     }
     std::string getName(){
         return name;
