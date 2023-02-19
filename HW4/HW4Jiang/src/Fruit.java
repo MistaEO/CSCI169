@@ -1,6 +1,6 @@
 import java.util.Date;
 
-public class Fruit extends Food implements Comparable<Fruit>{
+public class Fruit extends Food implements Comparable<Object>{
     protected Date ripe;
     public Fruit(){
         super.name = "Fruit";
@@ -19,7 +19,7 @@ public class Fruit extends Food implements Comparable<Fruit>{
         return ripe;
     }
 
-    public int compareTo(Fruit f){
+    /*public int compareTo(Fruit f){
         if (ripe == f.ripe){
             return 0;
         }else if(ripe.compareTo(f.ripe) == -1){
@@ -27,6 +27,11 @@ public class Fruit extends Food implements Comparable<Fruit>{
         }else{
             return 1;
         }
+    }
+    */
+    public int compareTo(Object f){
+        Fruit f = Fruit(Object f)
+        return this.ripe.compareTo(f.getRipe());
     }
     
 }
