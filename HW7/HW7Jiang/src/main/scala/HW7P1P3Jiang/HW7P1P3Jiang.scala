@@ -1,4 +1,4 @@
-package HW7P1toP3Jiang
+package HW7P1P3Jiang
 
 object Main extends App{
   /*Take a look at problems 3 and 5 from HW 6.
@@ -23,11 +23,19 @@ object Main extends App{
     }
   }
 
-  class Biguint(num:List[Int]){
-    def this(s:String) = this({def convert(s:String):List[Int] = {if(s.isEmpty) Nil else convert(s.tail):::List((s.head-'0'))}; convert(s)})
-    }
-
-  
+  /*Write a function def findlast(xs:List[Int], x:Int):Int that returns the index of the last time the element x appears in the list xs.
+  Return -1 if the element does not appear in the list.
+  For this function, you MUST use pattern matching, and you may NOT use any built-in list functions (isEmpty, head, tail, map, reduce, etc).
+  I will give 2 points extra credit if you do it without a helper function.
+  */
+  def findlast(xs:List[Int], x:Int):Int = xs match {
+    case Nil => -1
+    case list_front::rest_of_list =>
+      val index_tracker = findlast(rest_of_list, x)
+      if (index_tracker == -1)
+          if (list_front == x) 0
+          else -1
+      else index_tracker +1
   }
 
   def ls = 7 :: 2 :: 5 :: 1 :: Nil
@@ -40,5 +48,8 @@ object Main extends App{
   def mult(x: Int, y: Int) = x * y
   println(reduce_curry_anonymous(mult)(ls)) //70
   println(merge_curry_curry_anonymous(add)(m1)(m2)) //9,5,9,2
+  println(findlast(ls,5)) //2
+  println(findlast(m1,1)) //3
+  println(findlast(m2,19)) //-1
 
 }
